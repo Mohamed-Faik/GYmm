@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-GYM | Elite Fitness Evolution</title>
+    <meta name="description" content="Experience the future of fitness at NEO-GYM. High-performance training, premium amenities, and cutting-edge tech.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass">
+        <nav class="container">
+            <div class="logo">NEO<span>GYM</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#club">The Club</a></li>
+            </ul>
+            <button class="cta-btn secondary">Join Now</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content container">
+                <span class="badge">Elevate Your Reality</span>
+                <h1>TRANSFORM<br>YOUR <span>CORE</span></h1>
+                <p>Welcome to the ultimate training environment. Where science meets sweat and technology meets transformation.</p>
+                <div class="btn-group">
+                    <button id="get-info-btn" class="cta-btn primary">GET INFO</button>
+                    <button class="cta-btn ghost">View Plans</button>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <section id="training" class="features container">
+            <div class="section-title">
+                <h2>ELITE <span>PROGRAMS</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Hi-Tech Cardio</h3>
+                    <p>Next-gen treadmills with interactive global trails and biometrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏋️</div>
+                    <h3>Pro Weights</h3>
+                    <p>Olympic-grade equipment designed for maximum muscle engagement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧴</div>
+                    <h3>Luxury Spa</h3>
+                    <p>Recovery is priority. High-end steam rooms and cryo-therapy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Camera Modal -->
+    <div id="camera-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close">&times;</span>
+            <h3>GYM LIVE <span>FEED</span></h3>
+            <div id="camera-container">
+                <video id="video-feed" autoplay playsinline></video>
+                <div class="scan-line"></div>
+            </div>
+            <p class="status">Accessing Camera Systems...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NEO-GYM. Designed for the Future.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
