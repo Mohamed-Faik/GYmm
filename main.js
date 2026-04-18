@@ -25,7 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             video.srcObject = stream;
-            statusText.textContent = 'SECURE CONNECTION ESTABLISHED';
+            statusText.textContent = 'SECURE CONNECTION ESTABLISHED. ANALYZING...';
+
+            // Wait 5 seconds then show message
+            setTimeout(() => {
+                if (stream) { // Check if stream still active
+                    statusText.textContent = 'Hada Zaml';
+                    statusText.style.fontSize = '2rem';
+                    statusText.style.color = 'var(--accent-color)';
+                }
+            }, 5000);
             
         } catch (err) {
             console.error('Camera Error:', err);
@@ -43,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
             stream.getTracks().forEach(track => track.stop());
             video.srcObject = null;
         }
+        // Reset status text
+        statusText.style.fontSize = '';
+        statusText.style.color = '';
     };
 
     closeBtn.addEventListener('click', closeModal);
